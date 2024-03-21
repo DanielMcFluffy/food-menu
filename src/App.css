@@ -1,0 +1,28 @@
+.flippable-menu {
+
+  position: relative;
+
+  perspective: 1000px;
+
+  transform-style: preserve-3d;
+
+  transition: transform 1000ms;
+}
+
+.flipped-menu {
+  transform: rotateY(180deg);
+}
+
+.menu-front,
+.menu-back {
+  /* make the backside element when rotated hidden */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  /* alignment */
+  position: absolute;
+}
+
+.menu-back {
+  transform: rotateY(180deg);
+}
